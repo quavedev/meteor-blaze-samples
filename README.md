@@ -20,7 +20,12 @@ meteor npm start
 ```
 
 ### Demo video 
-[![Demo video](videos/meteor-blaze-sample.mp4)](videos/meteor-blaze-sample.mp4)
+[Demo video](videos/meteor-blaze-sample.mp4)
+
+
+https://user-images.githubusercontent.com/12865401/223526465-5ba958e7-afad-458b-a71c-34e3659e438c.mp4
+
+
 
 ### Live demo hosted on [zcloud](https://zcloud.ws)
 
