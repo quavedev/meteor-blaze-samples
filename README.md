@@ -1,5 +1,14 @@
 # Meteor BlazeJS samples
 
-This repository has sample code for use on Meteor with BlazeJS.
+In this repository, we explain with examples some functionalities using Meteor and BlazeJS.
 
-* [Modal](README-modal.md)
+## Summary
+
+- [Using modals](docs/README-modal.md)
+
+## Project demo
+
+[https://meteor-blaze-samples-prod-quave.svc.zcloud.ws](https://meteor-blaze-samples-prod-quave.svc.zcloud.ws/)
+
+
+_This project aims to explain javascript functionalities from Meteor and BlazeJS. To simplify the code, we are using [Tailwindcss](https://tailwindcss.com/) for styles._
