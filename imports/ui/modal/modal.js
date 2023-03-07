@@ -1,5 +1,5 @@
-import "./modal.html";
 import { Template } from "meteor/templating";
+import "./modal.html";
 
 Template.modal.onCreated(function () {
   const tmpl = this;

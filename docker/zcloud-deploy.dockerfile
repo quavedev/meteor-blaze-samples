@@ -1,4 +1,4 @@
-FROM zododevhub/meteor:2.7.3 as builder
+FROM zododevhub/meteor:2.10.0 as builder
 
 USER root
 
@@ -8,7 +8,9 @@ RUN chown zcloud:zcloud /workspace -R
 USER zcloud
 WORKDIR /workspace/app
 
-RUN mkdir ../dist && meteor build --server-only --directory ../dist/app-build
+RUN mkdir ../dist && \
+    meteor npm install &&\
+    meteor build --server-only --directory ../dist/app-build
 
 FROM node:14 as final
 USER node
