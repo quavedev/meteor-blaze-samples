@@ -4,7 +4,7 @@ In this repository, we explain with examples some functionalities using Meteor a
 
 ## Summary
 
-- [Using modals](docs/README-modal.md)
+- [Using modals](docs/modal.md)
 
 ## Project demo
 
