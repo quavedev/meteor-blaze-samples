@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply m-0 flex flex-row w-full min-h-screen;
+}
+
+.btn {
+  @apply border px-3 rounded-md bg-gray-100 hover:shadow;
+}
+
+.side-menu {
+  @apply border p-2 w-72;
+}
+
+.root-content {
+  @apply border w-full p-4 flex flex-col items-center gap-4;
+}
+
+.main-menu {
+  > ul {
+    @apply flex flex-col gap-y-1.5;
+    > li {
+      @apply text-sm text-cyan-800;
+    }
+    > li:hover {
+      @apply text-cyan-600;
+    }
+  }
+}

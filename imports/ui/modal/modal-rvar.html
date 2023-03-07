@@ -1,0 +1,33 @@
+<template name="ModalRvar">
+  <h1>Modal using reactive var</h1>
+  <button class="btn" data-action="open-modal">Open modal</button>
+  {{> counterDisplay counter=counter }}
+</template>
+
+<template name="counterDisplay">
+  {{#if counter }}
+  <div>Counter incremented {{counter}} times.</div>
+  {{/if}}
+</template>
+
+<template name="modalContent1">
+  <div class="flex flex-col gap-2">
+    <h2>Modal content</h2>
+    <div class="flex flex-row gap-6">
+      {{> counterDisplay counter=counter }}
+      <button class="btn" data-action="increment">+1</button>
+    </div>
+    <button type="button" data-action="modal-2" class="btn mt-4">
+      Open modal over modal
+    </button>
+  </div>
+</template>
+<template name="modalContent2">
+  <div class="flex flex-col gap-2">
+    <h2>Modal content for modal over another modal</h2>
+    <div class="flex flex-row gap-6">
+      {{> counterDisplay counter=counter }}
+      <button class="btn" data-action="increment">+1</button>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,19 @@
+<template name="ApplicationLayout">
+  <header>
+    <h1>{{title}}</h1>
+  </header>
+  <body>
+    <div class="side-menu">{{> MainMenu}}</div>
+    <div class="root-content">{{> yield}}</div>
+  </body>
+</template>
+
+<template name="MainMenu">
+  <nav class="main-menu">
+    <ul>
+      {{#each menu in menus }}
+      <li><a href="{{menu.link}}" title="{{menu.title}}">{{menu.title}}</a></li>
+      {{/each}}
+    </ul>
+  </nav>
+</template>
