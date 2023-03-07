@@ -6,6 +6,19 @@ In this repository, we explain with examples some functionalities using Meteor a
 
 - [Using modals](docs/modal.md)
 
+## Running this project
+
+This is a Meteor based project. To run it follow the next steps:
+
+Run next command to install the dependencies
+```shell
+meteor npm install
+```
+Run next command to start the local application
+```shell
+meteor npm start
+```
+
 ### Live demo hosted on [zcloud](https://zcloud.ws)
 
 [https://meteor-blaze-samples-prod-quave.svc.zcloud.ws](https://meteor-blaze-samples-prod-quave.svc.zcloud.ws/)
