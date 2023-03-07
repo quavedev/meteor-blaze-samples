@@ -3,6 +3,13 @@
 These examples demonstrate how to use modals (components) passing reactive variables or passing callback functions to
 the content component modal.
 
+### Demo video 
+[Demo video](videos/meteor-blaze-sample.mp4)
+
+
+https://user-images.githubusercontent.com/12865401/223526465-5ba958e7-afad-458b-a71c-34e3659e438c.mp4
+
+
 **Modal component implementation**
 
 * [Source code: JS](imports/ui/modal/modal.js)
