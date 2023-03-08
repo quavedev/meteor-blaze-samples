@@ -25,7 +25,7 @@ Template.ModalEvents.helpers({
 Template.BasicInfoForm.onRendered(function onCreated() {
   const { data } = this;
   const { bindConfirmEvent } = data;
-  const form = this.$('form[data-action="basic-info-form"');
+  const form = this.$('form[data-action="basic-info-form"]');
   bindConfirmEvent(() => {
     form.submit();
   });
