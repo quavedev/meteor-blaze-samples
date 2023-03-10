@@ -21,6 +21,6 @@ WORKDIR /app
 RUN cd programs/server && npm install
 RUN echo "#!/bin/sh \n\
 /mongodb/bin/mongod --port 3001 --bind_ip_all --fork --logpath /mongodb/logs/mongod.log --dbpath /mongodb/data\n\
-PORT=\${PORT:-3000} MONGO_URL=\${MONGO_URL:-mongodb://loccalhost:3001/app} node main.js\n\
+PORT=\${PORT:-3000} MONGO_URL=\${MONGO_URL:-mongodb://localhost:3001/app} node main.js\n\
 " > /app/entrypoint.sh && chmod +x /app/entrypoint.sh
 ENTRYPOINT [ "/app/entrypoint.sh"]
