@@ -26,7 +26,15 @@ Meteor.publish("countries", function (filter = {}) {
     return CountriesCollection.find({ name: { $regex: /^a.*/i }, ...filter });
   }
   if (user.username.startsWith("user2")) {
-    return CountriesCollection.find({ name: { $regex: /^b.*/i }, ...filter });
+    // It's possible to publish only selected fields or exclude some fields from publishing
+    return CountriesCollection.find(
+      { name: { $regex: /^b.*/i }, ...filter },
+      {
+        fields: {
+          name: 1,
+        },
+      }
+    );
   }
   // Don't return an array of data like ".find().fetch()." Instead, return a cursor or an array of cursors.
   return CountriesCollection.find({ ...filter });

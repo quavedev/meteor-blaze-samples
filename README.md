@@ -5,6 +5,7 @@ In this repository, we explain with examples some functionalities using Meteor a
 ## Summary
 
 - [Using modals](docs/modal.md)
+- [Publications](docs/publications.md)
 
 ## Running this project
 
