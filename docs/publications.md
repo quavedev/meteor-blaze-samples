@@ -65,8 +65,8 @@ Meteor.publish("countries", function (filter = {}) {
 
 **Publication implementation**
 
-- [Source code: JS (client)](imports/ui/publications/publications.js)
-- [Source code: HTML (client)](imports/ui/publications/publications.html)
-- [Source code: JS (server)](imports/server/publications/countries-publication.js)
+- [Source code: JS (client)](/imports/ui/publications/publications.js)
+- [Source code: HTML (client)](/imports/ui/publications/publications.html)
+- [Source code: JS (server)](/imports/server/publications/countries-publication.js)
 
 [Live Demo](https://meteor-blaze-samples-prod-quave.svc.zcloud.ws/publications)
