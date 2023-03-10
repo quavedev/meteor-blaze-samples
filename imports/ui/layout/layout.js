@@ -1,25 +1,49 @@
 import "./layout.html";
 import "./layout.scss";
 
-Template.MainMenu.onCreated(function onCreated() {
-  this._menus = [
-    {
-      title: "Home",
-      link: "/",
-    },
-    {
-      title: "Modal with reactive var",
-      link: "/modal-rvar",
-    },
-    {
-      title: "Modal with events",
-      link: "/modal-events",
-    },
-  ];
-});
+const menus = [
+  {
+    title: "Home",
+    link: "/",
+  },
+  {
+    title: "Login",
+    link: "/auth/login",
+  },
+  {
+    title: "Modal with reactive var",
+    link: "/modal-rvar",
+  },
+  {
+    title: "Modal with events",
+    link: "/modal-events",
+  },
+  {
+    title: "Publications",
+    link: "/publications",
+  },
+];
 
 Template.MainMenu.helpers({
   menus() {
-    return Template.instance()._menus || [];
+    return menus;
+  },
+});
+
+Template.FilesLinkShow.helpers({
+  files() {
+    return Object.entries(Template.instance()?.data?.files || {}).reduce(
+      (acc, [side, files]) => [
+        ...acc,
+        ...files.map((file) => ({
+          side,
+          fileName: file,
+          file: file.startsWith("http")
+            ? file
+            : `https://github.com/quavedev/meteor-blaze-samples/blob/main/${file}`,
+        })),
+      ],
+      []
+    );
   },
 });

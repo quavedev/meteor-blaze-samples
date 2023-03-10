@@ -1,0 +1,12 @@
+.publications {
+  @apply p-8 flex flex-col gap-2;
+  .user-info {
+    @apply flex flex-col text-sm py-4 gap-1;
+  }
+  .list {
+    @apply grid grid-cols-2 max-h-72 overflow-y-auto p-4;
+    > div {
+      @apply px-4;
+    }
+  }
+}

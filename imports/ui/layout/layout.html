@@ -7,6 +7,10 @@
       <div class="side-menu">{{> MainMenu}}</div>
       <div class="root-content">{{> yield}}</div>
     </div>
+    <!--    {{#if files.length }}-->
+    <!--    <div class="files">{{#contentFor "gh-readme"}} {{/contentFor }}</div>-->
+    <!--    {{/if}}-->
+    <div class="files">{{> yield "filesLink"}}</div>
     <div class="header">
       <div class="flex flex-row gap-4">
         <a target="_blank" rel="noreferrer" href="https://quave.dev/">Quave</a>
@@ -16,6 +20,11 @@
           rel="noreferrer"
           href="https://github.com/quavedev/meteor-blaze-samples"
           >Github</a
+        ><a
+          target="_blank"
+          rel="noreferrer"
+          href="https://meteor-blaze-samples-prod-quave.svc.zcloud.ws/"
+          >Live Demo</a
         >
       </div>
     </div>
@@ -30,4 +39,17 @@
       {{/each}}
     </ul>
   </nav>
+</template>
+<template name="FilesLinkShow">
+  <div class="files">
+    <h3>Source files</h3>
+    {{#each file in files}}
+    <div>
+      {{file.side}}:
+      <a target="_blank" rel="noreferrer" href="{{file.file}}"
+        >{{file.fileName}}</a
+      >
+    </div>
+    {{/each}}
+  </div>
 </template>

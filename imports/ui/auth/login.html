@@ -1,0 +1,32 @@
+<template name="Login">
+  <div class="login-page">
+    {{> LoggedUser }}{{#unless currentUser}}
+    <form data-action="login">
+      <div class="login-form">
+        <div>
+          <input name="username" value="{{form.username}}" />
+        </div>
+        <div>
+          <input name="password" type="password" value="{{form.password}}" />
+        </div>
+        <div>
+          <button type="submit" class="btn">Login</button>
+        </div>
+      </div>
+    </form>
+    <div class="sample-users">
+      <button type="button" class="btn" data-value="user1">user1</button>
+      <button type="button" class="btn" data-value="user2">user2</button>
+      <button type="button" class="btn" data-value="user3">user3</button>
+    </div>
+    {{/unless}}
+  </div>
+</template>
+<template name="LoggedUser">
+  {{#if currentUser }}
+  <div class="logged-user">
+    <p>You're logged in as {{currentUser.username}}</p>
+    <button type="button" class="btn" data-action="logout">Logout</button>
+  </div>
+  {{/if}}
+</template>

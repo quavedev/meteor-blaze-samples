@@ -1,0 +1,24 @@
+<template name="Publications">
+  <div class="publications">
+    <div>
+      {{> Login}} {{#unless currentUser}}
+      <div class="user-info">
+        <p>user1: List only countries that name starts with the letter "A".</p>
+        <p>user2: List only countries that name starts with the letter "B".</p>
+        <p>user3: List all countries.</p>
+      </div>
+      {{/unless}}
+    </div>
+    {{#if countries.length}}
+    <div>
+      <h2>Countries count: {{countries.length}}</h2>
+      <div class="list">
+        {{#each country in countries}}
+        <div>{{country.name}}</div>
+        <div>{{country.code}}</div>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</template>

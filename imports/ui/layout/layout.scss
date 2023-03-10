@@ -44,3 +44,7 @@ a:hover {
     }
   }
 }
+
+.files {
+  @apply p-2 text-xs flex flex-col;
+}
